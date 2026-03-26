@@ -1,4 +1,5 @@
 import { getLevelForPoints, getProgressToNextLevel, levels } from '../data/levels'
+import { badges, getUnlockedBadges } from '../data/badges'
 import StatsCard from '../components/StatsCard'
 import './Dashboard.css'
 
@@ -21,6 +22,8 @@ function Dashboard({ stats, history }) {
   const currentIndex = levels.findIndex((l) => l.level === currentLevel.level)
   const nextLevel = currentIndex < levels.length - 1 ? levels[currentIndex + 1] : null
   const pointsToNext = nextLevel ? nextLevel.minPoints - totalPoints : 0
+
+  const unlockedBadges = getUnlockedBadges(stats)
 
   const recentHistory = (history || []).slice(0, 10)
 
@@ -97,6 +100,24 @@ function Dashboard({ stats, history }) {
             Niveau maximum atteint !
           </p>
         )}
+      </div>
+
+      <div className="dashboard__badges">
+        <h2 className="dashboard__section-title">Badges</h2>
+        <div className="dashboard__badges-grid">
+          {badges.map((badge) => {
+            const unlocked = unlockedBadges.some((b) => b.id === badge.id)
+            return (
+              <div
+                key={badge.id}
+                className={`badge ${unlocked ? 'badge--unlocked' : 'badge--locked'}`}
+              >
+                <span className="badge__icon">{unlocked ? badge.icon : '\u{1F512}'}</span>
+                <span className="badge__title">{badge.title}</span>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <div className="dashboard__history">

@@ -116,10 +116,54 @@
 .categories-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .categories-list__item {
   opacity: 0;
   animation: fadeIn 0.4s ease forwards;
+}
+
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 4px;
+  margin-top: -4px;
+}
+
+.category-action-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.category-action-btn--lesson {
+  background: var(--blue-bg);
+  color: var(--blue-dark);
+}
+
+.category-action-btn--lesson:hover {
+  background: var(--blue-light);
+  color: #fff;
+}
+
+.category-action-btn--exercise {
+  background: var(--green-bg);
+  color: var(--green-dark);
+}
+
+.category-action-btn--exercise:hover {
+  background: var(--green);
+  color: #fff;
 }

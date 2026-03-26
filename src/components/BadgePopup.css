@@ -1,0 +1,165 @@
+/* ===== Badge Popup ===== */
+
+.badge-popup__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: badgeFadeIn 0.3s ease;
+}
+
+.badge-popup__card {
+  background: var(--surface, #fff);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+  max-width: 340px;
+  width: 100%;
+  border: 3px solid transparent;
+  background-image: linear-gradient(var(--surface, #fff), var(--surface, #fff)),
+    linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.badge-popup__header {
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-popup__icon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.badge-popup__icon {
+  font-size: 80px;
+  line-height: 1;
+  display: block;
+  position: relative;
+  z-index: 1;
+  animation: badgeBounce 0.6s ease 0.3s both;
+}
+
+.badge-popup__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, transparent 70%);
+  animation: badgeGlow 2s ease-in-out infinite;
+}
+
+.badge-popup__title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text, #333);
+  margin: 0 0 8px;
+}
+
+.badge-popup__description {
+  font-size: 0.95rem;
+  color: var(--text-medium, #666);
+  font-weight: 600;
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.badge-popup__button {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 40px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+}
+
+.badge-popup__button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+}
+
+.badge-popup__button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes badgeFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes badgeBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 400px) {
+  .badge-popup__card {
+    padding: 24px 20px;
+  }
+
+  .badge-popup__icon {
+    font-size: 64px;
+  }
+
+  .badge-popup__glow {
+    width: 100px;
+    height: 100px;
+  }
+}

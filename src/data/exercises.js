@@ -125,6 +125,51 @@ export const exercises = {
         options: ["Leur", "Leurs"],
         correct: 1,
         explanation: "« Leurs » avec -s est un déterminant possessif qui s'accorde au pluriel car « chaussures » est pluriel. Astuce : « leur(s) » devant un nom = possessif, on accorde avec le nom."
+      },
+      {
+        id: "h16",
+        type: "fill",
+        question: "Complétez : Il ___ parti très tôt ce matin.",
+        answer: "est",
+        acceptedAnswers: ["est"],
+        hint: "Verbe être ou conjonction ?",
+        explanation: "« est » est le verbe être conjugué (3e personne). On peut le remplacer par « était ». Ne pas confondre avec « et » (conjonction = et aussi)."
+      },
+      {
+        id: "h17",
+        type: "fill",
+        question: "Complétez : Je vais ___ le marché acheter des fruits.",
+        answer: "à",
+        acceptedAnswers: ["à", "a"],
+        hint: "Préposition ou verbe avoir ?",
+        explanation: "« à » avec accent est une préposition indiquant le lieu ou la direction. On ne peut pas le remplacer par « avait », donc ce n'est pas le verbe avoir. La bonne réponse est « à »."
+      },
+      {
+        id: "h18",
+        type: "fill",
+        question: "Complétez : ___ peut toujours essayer.",
+        answer: "On",
+        acceptedAnswers: ["On", "on"],
+        hint: "Pronom indéfini ou verbe avoir ?",
+        explanation: "« On » est un pronom personnel indéfini (= quelqu'un, nous). On peut le remplacer par « il » ou « quelqu'un ». « Ont » est le verbe avoir conjugué (3e personne du pluriel)."
+      },
+      {
+        id: "h19",
+        type: "fill",
+        question: "Complétez : Ils ne ___ pas encore arrivés.",
+        answer: "sont",
+        acceptedAnswers: ["sont"],
+        hint: "Verbe être ou possessif ?",
+        explanation: "« sont » est le verbe être au présent (3e personne du pluriel). On peut le remplacer par « étaient ». Ne pas confondre avec « son » (déterminant possessif = le sien)."
+      },
+      {
+        id: "h20",
+        type: "fill",
+        question: "Complétez : ___ enfant est très gentil.",
+        answer: "Cet",
+        acceptedAnswers: ["Cet", "cet"],
+        hint: "Déterminant démonstratif devant une voyelle.",
+        explanation: "Devant un nom masculin commençant par une voyelle ou un h muet, on utilise « cet » au lieu de « ce ». Exemples : cet enfant, cet homme, cet arbre."
       }
     ]
   },
@@ -247,6 +292,51 @@ export const exercises = {
         options: ["a", "avait", "eut", "aura"],
         correct: 1,
         explanation: "Le plus-que-parfait se forme avec l'auxiliaire à l'imparfait + participe passé. « Avoir » à l'imparfait avec « il » = avait. Le plus-que-parfait exprime une action antérieure à une autre action passée."
+      },
+      {
+        id: "c15",
+        type: "fill",
+        question: "Complétez : Nous ___ en vacances la semaine prochaine. (partir, futur simple)",
+        answer: "partirons",
+        acceptedAnswers: ["partirons"],
+        hint: "Futur simple, 1re personne du pluriel.",
+        explanation: "« Partir » au futur simple avec « nous » donne « partirons ». Le futur des verbes du 3e groupe se forme souvent sur l'infinitif + terminaisons (-ai, -as, -a, -ons, -ez, -ont)."
+      },
+      {
+        id: "c16",
+        type: "fill",
+        question: "Complétez : Tu ___ trop vite, ralentis ! (conduire, présent)",
+        answer: "conduis",
+        acceptedAnswers: ["conduis"],
+        hint: "Verbe du 3e groupe, terminaison en -s avec « tu ».",
+        explanation: "« Conduire » au présent avec « tu » donne « conduis ». Conjugaison : je conduis, tu conduis, il conduit, nous conduisons, vous conduisez, ils conduisent."
+      },
+      {
+        id: "c17",
+        type: "fill",
+        question: "Complétez : Hier, elle ___ une longue lettre. (écrire, passé composé)",
+        answer: "a écrit",
+        acceptedAnswers: ["a écrit", "a ecrit"],
+        hint: "Passé composé = auxiliaire + participe passé.",
+        explanation: "Le passé composé de « écrire » se forme avec avoir + le participe passé « écrit ». Attention : le participe passé d'écrire est irrégulier (écrit, pas « écrivé »)."
+      },
+      {
+        id: "c18",
+        type: "fill",
+        question: "Complétez : Quand j'étais jeune, je ___ tous les jours. (lire, imparfait)",
+        answer: "lisais",
+        acceptedAnswers: ["lisais"],
+        hint: "Imparfait, 1re personne du singulier.",
+        explanation: "« Lire » à l'imparfait avec « je » donne « lisais ». Le radical de l'imparfait vient de la 1re personne du pluriel au présent (nous lisons → lis-) + terminaisons -ais, -ais, -ait, -ions, -iez, -aient."
+      },
+      {
+        id: "c19",
+        type: "fill",
+        question: "Complétez : Il faut que vous ___ à l'heure. (venir, subjonctif présent)",
+        answer: "veniez",
+        acceptedAnswers: ["veniez"],
+        hint: "Subjonctif présent, 2e personne du pluriel.",
+        explanation: "« Venir » au subjonctif présent avec « vous » donne « veniez ». Conjugaison du subjonctif : que je vienne, que tu viennes, qu'il vienne, que nous venions, que vous veniez, qu'ils viennent."
       }
     ]
   },
@@ -369,6 +459,51 @@ export const exercises = {
         options: ["joint", "joints", "jointe", "jointes"],
         correct: 1,
         explanation: "« Ci-joint » placé après le nom s'accorde avec celui-ci. « Les documents » est masculin pluriel, donc « ci-joints ». Astuce : « ci-joint » est invariable en début de phrase ou devant un nom sans déterminant."
+      },
+      {
+        id: "a15",
+        type: "fill",
+        question: "Complétez : Les lettres que j'ai ___ sont sur la table. (écrire)",
+        answer: "écrites",
+        acceptedAnswers: ["écrites", "ecrites"],
+        hint: "Accord du participe passé avec avoir quand le COD est avant.",
+        explanation: "Avec l'auxiliaire avoir, le participe passé s'accorde avec le COD placé avant le verbe. « Les lettres » (féminin pluriel) est le COD placé avant = « écrites »."
+      },
+      {
+        id: "a16",
+        type: "fill",
+        question: "Complétez : Elle s'est ___ ce matin à 6 heures. (lever)",
+        answer: "levée",
+        acceptedAnswers: ["levée", "levee"],
+        hint: "Verbe pronominal : accord avec le sujet ?",
+        explanation: "Avec le verbe pronominal « se lever », le pronom « se » est COD (elle a levé qui ? elle-même). Le COD est avant le verbe, donc le participe s'accorde avec le sujet « elle » = féminin singulier = « levée »."
+      },
+      {
+        id: "a17",
+        type: "fill",
+        question: "Complétez : Ces gâteaux sont ___. (délicieux)",
+        answer: "délicieux",
+        acceptedAnswers: ["délicieux", "delicieux"],
+        hint: "Masculin pluriel d'un adjectif en -eux.",
+        explanation: "Les adjectifs en -eux ne changent pas au masculin pluriel : un gâteau délicieux, des gâteaux délicieux. Le -x final sert déjà de marque du pluriel. Au féminin : délicieuse(s)."
+      },
+      {
+        id: "a18",
+        type: "fill",
+        question: "Complétez : Nous avons acheté des chaussures ___. (neuf)",
+        answer: "neuves",
+        acceptedAnswers: ["neuves"],
+        hint: "Accord de l'adjectif avec « chaussures » (féminin pluriel).",
+        explanation: "« Chaussures » est féminin pluriel. L'adjectif « neuf » devient « neuve » au féminin et « neuves » au féminin pluriel. Le -f se transforme en -ve au féminin (comme actif/active, bref/brève)."
+      },
+      {
+        id: "a19",
+        type: "fill",
+        question: "Complétez : Mes grands-parents sont ___ en Italie. (naître, passé composé)",
+        answer: "nés",
+        acceptedAnswers: ["nés", "nes"],
+        hint: "Auxiliaire être : le participe s'accorde avec le sujet.",
+        explanation: "« Naître » se conjugue avec l'auxiliaire être au passé composé. Avec être, le participe s'accorde avec le sujet. « Mes grands-parents » = masculin pluriel = « nés »."
       }
     ]
   },
@@ -499,6 +634,51 @@ export const exercises = {
         options: ["différament", "différemment", "différament", "differemment"],
         correct: 1,
         explanation: "« Différemment » prend -emment car il vient de l'adjectif « différent » (en -ent). Règle : adjectif en -ent → adverbe en -emment ; adjectif en -ant → adverbe en -amment."
+      },
+      {
+        id: "o16",
+        type: "fill",
+        question: "Complétez avec la bonne orthographe : Il a agi ___ (indépendant → adverbe).",
+        answer: "indépendamment",
+        acceptedAnswers: ["indépendamment", "independamment"],
+        hint: "Adjectif en -ant → adverbe en -amment.",
+        explanation: "Les adjectifs en -ant forment leur adverbe en -amment : indépendant → indépendamment, suffisant → suffisamment, brillant → brillamment."
+      },
+      {
+        id: "o17",
+        type: "fill",
+        question: "Complétez avec la bonne orthographe : J'ai rendez-vous chez le ___ demain.",
+        answer: "médecin",
+        acceptedAnswers: ["médecin", "medecin"],
+        hint: "Attention au accent et à la fin du mot.",
+        explanation: "« Médecin » prend un accent aigu sur le premier e et se termine par -in (pas -ein). Erreur fréquente : écrire « médecin » avec -ein comme « plein ». La famille du mot : médecine, médical."
+      },
+      {
+        id: "o18",
+        type: "fill",
+        question: "Complétez avec la bonne orthographe : Cette situation est très ___.",
+        answer: "embarrassante",
+        acceptedAnswers: ["embarrassante", "embarassante"],
+        hint: "Deux lettres sont doublées dans ce mot.",
+        explanation: "« Embarrassante » prend deux -r et deux -s. C'est un piège fréquent. Astuce mnémotechnique : « embarras » contient 2r et 2s, comme si on était vraiment coincé (doublement bloqué). La bonne orthographe est « embarrassante »."
+      },
+      {
+        id: "o19",
+        type: "fill",
+        question: "Complétez avec la bonne orthographe : Nous avons étudié la ___ française.",
+        answer: "littérature",
+        acceptedAnswers: ["littérature", "litterature"],
+        hint: "Attention aux doubles lettres et aux accents.",
+        explanation: "« Littérature » prend deux -t et un accent aigu sur le deuxième e. Toute la famille du mot garde le double -t : littéraire, littéral. Ne pas confondre avec l'anglais « literature » (un seul t)."
+      },
+      {
+        id: "o20",
+        type: "fill",
+        question: "Complétez : Il m'a donné son ___ pour le projet.",
+        answer: "accord",
+        acceptedAnswers: ["accord", "Accord"],
+        hint: "Un seul c ou deux ? Attention au début du mot.",
+        explanation: "« Accord » prend deux -c. C'est un mot de la famille de « accorder ». Astuce : les mots commençant par ac- doublent souvent le c (accueil, accuser, accéder, accord). Exception notable : « acrobate »."
       }
     ]
   }

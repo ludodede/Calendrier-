@@ -13,7 +13,7 @@ function Categories({ stats }) {
       <div className="container">
         <div className="categories-header">
           <h1 className="categories-title">Exercices</h1>
-          <p className="categories-subtitle">Choisissez une catégorie</p>
+          <p className="categories-subtitle">Apprenez les règles, puis pratiquez !</p>
         </div>
 
         <Link
@@ -27,8 +27,8 @@ function Categories({ stats }) {
             <h3 className="daily-challenge__title">Défi du jour</h3>
             <p className="daily-challenge__description">
               {dailyDone
-                ? 'Complété !'
-                : '10 questions pour garder ta série'}
+                ? 'Complété ! Revenez demain'
+                : '10 questions pour garder votre série'}
             </p>
           </div>
           <div className="daily-challenge__arrow">
@@ -47,14 +47,24 @@ function Categories({ stats }) {
                 className="categories-list__item"
                 style={{ animationDelay: `${(index + 1) * 80}ms` }}
               >
-                <CategoryCard
-                  id={catId}
-                  title={cat.title}
-                  icon={cat.icon}
-                  color={cat.color}
-                  description={cat.description}
-                  questionsCount={cat.questions.length}
-                />
+                <div className="category-wrapper">
+                  <CategoryCard
+                    id={catId}
+                    title={cat.title}
+                    icon={cat.icon}
+                    color={cat.color}
+                    description={cat.description}
+                    questionsCount={cat.questions.length}
+                  />
+                  <div className="category-actions">
+                    <Link to={`/lesson/${catId}`} className="category-action-btn category-action-btn--lesson">
+                      📖 Leçon
+                    </Link>
+                    <Link to={`/exercise/${catId}`} className="category-action-btn category-action-btn--exercise">
+                      ✏️ Exercice
+                    </Link>
+                  </div>
+                </div>
               </div>
             )
           })}

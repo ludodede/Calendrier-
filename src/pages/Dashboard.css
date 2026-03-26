@@ -98,6 +98,62 @@
   color: var(--green);
 }
 
+/* ---------- Badges Section ---------- */
+
+.dashboard__badges {
+  margin-bottom: 28px;
+  animation: fadeIn 0.4s ease 0.3s both;
+}
+
+.dashboard__badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge--unlocked {
+  cursor: default;
+}
+
+.badge--unlocked:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.badge--locked {
+  opacity: 0.45;
+  filter: grayscale(0.5);
+}
+
+.badge__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.badge__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.badge--locked .badge__title {
+  color: var(--text-light);
+}
+
 /* ---------- History Section ---------- */
 
 .dashboard__history {

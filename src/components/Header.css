@@ -1,0 +1,131 @@
+/* ============================================
+   MaPlume - Header / Navigation Styles
+   Duolingo-inspired mobile-first layout
+   ============================================ */
+
+/* Main content padding to account for fixed bars */
+.app {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* ---- Top Stats Bar ---- */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.top-bar-brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: #58CC02;
+  letter-spacing: -0.3px;
+}
+
+.top-bar-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c3c3c;
+}
+
+.stat-item.streak .stat-value {
+  color: #FF9600;
+}
+
+.stat-item.points .stat-value {
+  color: #FFC800;
+}
+
+/* ---- Bottom Navigation Bar ---- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Fix bottom nav width on wider screens */
+@media (min-width: 600px) {
+  .bottom-nav {
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+  }
+}
+
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  text-decoration: none;
+  color: #AFAFAF;
+  gap: 2px;
+  transition: color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-tab:hover {
+  color: #8a8a8a;
+}
+
+.nav-tab--active {
+  color: #58CC02;
+}
+
+.nav-tab--active:hover {
+  color: #58CC02;
+}
+
+.nav-tab-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.nav-tab--active .nav-tab-label {
+  font-weight: 700;
+  color: #58CC02;
+}

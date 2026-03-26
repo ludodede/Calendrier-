@@ -1,0 +1,143 @@
+/* ============================================
+   ExerciseCard - QCM quiz card
+   Duolingo-inspired option buttons
+   ============================================ */
+
+.exercise-card {
+  width: 100%;
+}
+
+.exercise-card-question {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.exercise-card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exercise-card-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 3px 0 var(--border);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.exercise-card-option:hover:not(:disabled) {
+  border-color: var(--border-dark);
+  background-color: #fafafa;
+}
+
+.exercise-card-option:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+/* Option number badge */
+.exercise-card-option-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-light);
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+
+.exercise-card-option-text {
+  flex: 1;
+}
+
+/* Feedback icon */
+.exercise-card-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* ---- Answered States ---- */
+
+/* Correct option */
+.exercise-card-option--correct {
+  border-color: #58CC02;
+  background-color: var(--green-bg);
+  box-shadow: 0 3px 0 var(--green-dark);
+}
+
+.exercise-card-option--correct .exercise-card-option-number {
+  border-color: #58CC02;
+  background: #58CC02;
+  color: #fff;
+}
+
+.exercise-card-option--correct .exercise-card-option-icon {
+  background: #58CC02;
+  color: #fff;
+}
+
+/* Wrong selected option */
+.exercise-card-option--wrong {
+  border-color: var(--red);
+  background-color: var(--red-bg);
+  box-shadow: 0 3px 0 var(--red-dark);
+  animation: shake 0.4s ease;
+}
+
+.exercise-card-option--wrong .exercise-card-option-number {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.exercise-card-option--wrong .exercise-card-option-icon {
+  background: var(--red);
+  color: #fff;
+}
+
+/* Dimmed (other options after answering) */
+.exercise-card-option--dimmed {
+  opacity: 0.45;
+  cursor: default;
+  box-shadow: 0 2px 0 var(--border);
+}
+
+/* Disabled state */
+.exercise-card-option:disabled {
+  cursor: default;
+}
+
+.exercise-card-option:disabled:active {
+  transform: none;
+}

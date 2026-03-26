@@ -1,0 +1,125 @@
+.categories-page {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+/* Header */
+.categories-header {
+  margin-bottom: var(--space-lg);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.categories-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.categories-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  margin-top: 4px;
+}
+
+/* Daily Challenge Card */
+.daily-challenge-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFFDE7 100%);
+  border: 2px solid var(--yellow);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 80ms;
+  opacity: 0;
+}
+
+.daily-challenge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 200, 0, 0.25);
+}
+
+.daily-challenge-card:active {
+  transform: translateY(0);
+}
+
+.daily-challenge-card--completed {
+  background: linear-gradient(135deg, #F0FFF0 0%, #E8F5E9 100%);
+  border-color: var(--green);
+}
+
+.daily-challenge__icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 200, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.daily-challenge-card--completed .daily-challenge__icon {
+  background: rgba(88, 204, 2, 0.15);
+}
+
+.daily-challenge__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.daily-challenge__title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.daily-challenge__description {
+  font-size: 0.8rem;
+  color: var(--text-medium);
+  line-height: 1.4;
+}
+
+.daily-challenge-card--completed .daily-challenge__description {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.daily-challenge__arrow {
+  display: flex;
+  align-items: center;
+  color: var(--yellow-dark);
+  opacity: 0.6;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.daily-challenge-card--completed .daily-challenge__arrow {
+  color: var(--green-dark);
+}
+
+.daily-challenge-card:hover .daily-challenge__arrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Categories List */
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.categories-list__item {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}

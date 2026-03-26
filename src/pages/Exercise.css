@@ -1,0 +1,110 @@
+/* ============================================
+   Exercise Page - Full screen focus mode
+   ============================================ */
+
+.exercise-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--surface);
+  z-index: 150;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.exercise-page-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  padding-bottom: 200px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-question-number {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.exercise-card-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+/* Question transition animation */
+.exercise-card-wrapper--entering {
+  animation: exerciseFadeIn 0.35s ease forwards;
+}
+
+@keyframes exerciseFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading state */
+.exercise-loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+/* Error state */
+.exercise-error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 32px;
+}
+
+.exercise-error-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.exercise-error-text {
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.5;
+}
+
+.exercise-error-btn {
+  padding: 12px 24px;
+  background: var(--green);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 4px 0 var(--green-dark);
+  margin-top: 8px;
+}
+
+.exercise-error-btn:active {
+  box-shadow: 0 2px 0 var(--green-dark);
+  transform: translateY(2px);
+}

@@ -1,0 +1,229 @@
+/* ===== Results Page ===== */
+
+.results {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Confetti ---------- */
+
+.results--perfect::before,
+.results--perfect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  bottom: -10px;
+  animation: confettiRise 3s ease-out forwards;
+}
+
+.confetti-piece:nth-child(1)  { left: 5%;  background: #FF4B4B; animation-delay: 0s;    animation-duration: 2.8s; }
+.confetti-piece:nth-child(2)  { left: 15%; background: #FFD700; animation-delay: 0.1s;  animation-duration: 3.2s; }
+.confetti-piece:nth-child(3)  { left: 25%; background: #58CC02; animation-delay: 0.2s;  animation-duration: 2.6s; }
+.confetti-piece:nth-child(4)  { left: 35%; background: #1CB0F6; animation-delay: 0.05s; animation-duration: 3s; }
+.confetti-piece:nth-child(5)  { left: 45%; background: #CE82FF; animation-delay: 0.15s; animation-duration: 2.9s; }
+.confetti-piece:nth-child(6)  { left: 55%; background: #FF9600; animation-delay: 0.25s; animation-duration: 3.1s; }
+.confetti-piece:nth-child(7)  { left: 65%; background: #FF4B4B; animation-delay: 0.08s; animation-duration: 2.7s; }
+.confetti-piece:nth-child(8)  { left: 75%; background: #58CC02; animation-delay: 0.18s; animation-duration: 3.3s; }
+.confetti-piece:nth-child(9)  { left: 85%; background: #FFD700; animation-delay: 0.12s; animation-duration: 2.5s; }
+.confetti-piece:nth-child(10) { left: 95%; background: #1CB0F6; animation-delay: 0.22s; animation-duration: 3s; }
+.confetti-piece:nth-child(11) { left: 10%; background: #CE82FF; animation-delay: 0.3s;  animation-duration: 2.8s; width: 8px; height: 8px; }
+.confetti-piece:nth-child(12) { left: 30%; background: #FF9600; animation-delay: 0.35s; animation-duration: 3.1s; width: 12px; height: 6px; }
+.confetti-piece:nth-child(13) { left: 50%; background: #FF4B4B; animation-delay: 0.4s;  animation-duration: 2.9s; width: 6px; height: 12px; }
+.confetti-piece:nth-child(14) { left: 70%; background: #58CC02; animation-delay: 0.28s; animation-duration: 3.2s; width: 8px; height: 8px; }
+.confetti-piece:nth-child(15) { left: 90%; background: #FFD700; animation-delay: 0.32s; animation-duration: 2.6s; border-radius: 50%; }
+
+@keyframes confettiRise {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(720deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ---------- Score Circle ---------- */
+
+.results__score-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 24px;
+  animation: popIn 0.6s ease both;
+}
+
+.results__score-svg {
+  width: 180px;
+  height: 180px;
+  transform: rotate(-90deg);
+}
+
+.results__score-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 10;
+}
+
+.results__score-ring {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease;
+  animation: ringDraw 1.2s ease forwards;
+}
+
+@keyframes ringDraw {
+  from {
+    stroke-dasharray: 0 999;
+  }
+}
+
+.results__score-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.results__score-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+}
+
+.results__score-label {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  font-weight: 600;
+}
+
+/* ---------- Points ---------- */
+
+.results__points {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFD700;
+  margin-bottom: 12px;
+  animation: popIn 0.5s ease 0.4s both;
+}
+
+.results__points-icon {
+  font-size: 1.6rem;
+}
+
+/* ---------- Message ---------- */
+
+.results__message {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+  animation: fadeIn 0.5s ease 0.6s both;
+}
+
+/* ---------- Daily Challenge ---------- */
+
+.results__daily {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange-bg);
+  color: var(--orange-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  animation: fadeIn 0.5s ease 0.8s both;
+}
+
+/* ---------- Buttons ---------- */
+
+.results__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 24px;
+  animation: fadeIn 0.5s ease 1s both;
+}
+
+.results__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+  border: none;
+}
+
+.results__btn:active {
+  transform: translateY(2px);
+}
+
+.results__btn--primary {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 4px 0 var(--green-dark);
+}
+
+.results__btn--primary:active {
+  box-shadow: 0 2px 0 var(--green-dark);
+}
+
+.results__btn--outlined {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+  box-shadow: none;
+}
+
+.results__btn--outlined:hover {
+  background: var(--green-bg);
+}

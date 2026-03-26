@@ -1,0 +1,213 @@
+/* ===== Home / Landing Page ===== */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  animation: homeFadeIn 0.6s ease-out;
+}
+
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.home-hero {
+  width: 100%;
+  background: linear-gradient(135deg, #58cc02 0%, #1cb0a8 100%);
+  display: flex;
+  justify-content: center;
+  padding: 64px 24px 56px;
+}
+
+.home-hero-content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.home-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.home-tagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  opacity: 0.95;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 36px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* ---------- CTA Button ---------- */
+
+.home-cta {
+  display: inline-block;
+  background: #58cc02;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 48px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 4px 0 #46a302;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.home-cta:active,
+.home-cta:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #46a302;
+}
+
+/* Inside the hero, make the button stand out against the gradient */
+.home-hero .home-cta {
+  background: #fff;
+  color: #58cc02;
+  box-shadow: 0 4px 0 #d4d4d4;
+}
+
+.home-hero .home-cta:active,
+.home-hero .home-cta:hover {
+  box-shadow: 0 2px 0 #d4d4d4;
+}
+
+/* ---------- Features ---------- */
+
+.home-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  width: 100%;
+  padding: 36px 20px 16px;
+}
+
+.home-feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: cardSlideUp 0.5s ease-out both;
+}
+
+.home-feature-card:nth-child(1) { animation-delay: 0.15s; }
+.home-feature-card:nth-child(2) { animation-delay: 0.3s; }
+.home-feature-card:nth-child(3) { animation-delay: 0.45s; }
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-feature-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0fce4;
+  border-radius: 14px;
+}
+
+.home-feature-card:nth-child(2) .home-feature-icon {
+  background: #e6f9f8;
+}
+
+.home-feature-card:nth-child(3) .home-feature-icon {
+  background: #fff4e0;
+}
+
+.home-feature-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: #333;
+}
+
+.home-feature-desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ---------- Stats Teaser ---------- */
+
+.home-stats-teaser {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  padding: 24px 20px 40px;
+  animation: homeFadeIn 0.7s ease-out 0.5s both;
+}
+
+.home-stats-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 0 0 18px;
+}
+
+.home-stats-text strong {
+  color: #58cc02;
+}
+
+.home-cta--secondary {
+  background: #58cc02;
+  color: #fff;
+  font-size: 1rem;
+  padding: 14px 40px;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (min-width: 480px) {
+  .home-title {
+    font-size: 3.8rem;
+  }
+
+  .home-tagline {
+    font-size: 1.5rem;
+  }
+
+  .home-features {
+    padding-top: 44px;
+  }
+}

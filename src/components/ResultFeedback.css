@@ -1,0 +1,123 @@
+/* ============================================
+   ResultFeedback - Slide-up answer panel
+   ============================================ */
+
+.result-feedback-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.result-feedback-overlay--visible {
+  pointer-events: auto;
+}
+
+.result-feedback {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 16px 16px 0 0;
+  padding: 24px 20px;
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 201;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.result-feedback--visible {
+  transform: translateY(0);
+}
+
+/* Correct variant */
+.result-feedback--correct {
+  background-color: var(--green-bg);
+  border-top: 3px solid #58CC02;
+}
+
+.result-feedback--correct .result-feedback-title {
+  color: #58CC02;
+}
+
+.result-feedback--correct .result-feedback-btn {
+  background-color: #58CC02;
+  box-shadow: 0 4px 0 var(--green-dark);
+}
+
+.result-feedback--correct .result-feedback-btn:hover {
+  background-color: var(--green-dark);
+}
+
+.result-feedback--correct .result-feedback-btn:active {
+  box-shadow: 0 2px 0 var(--green-dark);
+  transform: translateY(2px);
+}
+
+/* Wrong variant */
+.result-feedback--wrong {
+  background-color: var(--red-bg);
+  border-top: 3px solid var(--red);
+}
+
+.result-feedback--wrong .result-feedback-title {
+  color: var(--red);
+}
+
+.result-feedback--wrong .result-feedback-btn {
+  background-color: var(--red);
+  box-shadow: 0 4px 0 var(--red-dark);
+}
+
+.result-feedback--wrong .result-feedback-btn:hover {
+  background-color: var(--red-dark);
+}
+
+.result-feedback--wrong .result-feedback-btn:active {
+  box-shadow: 0 2px 0 var(--red-dark);
+  transform: translateY(2px);
+}
+
+/* Inner elements */
+.result-feedback-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.result-feedback-title-icon {
+  font-size: 22px;
+}
+
+.result-feedback-explanation {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.result-feedback-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
